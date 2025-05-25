@@ -1,0 +1,4 @@
+.env
+Blogsy/__pycache__/*
+user_management/__pycache__/*
+user_management/migrations/__pycache__/*
