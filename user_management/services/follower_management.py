@@ -1,12 +1,13 @@
-from Blogsy.user_management.constants import FollowerStatusConstants
-from Blogsy.user_management.models import Followers, User
-from Blogsy.user_management.serializers import FollowerSerializer
+from ..constants import FollowerStatusConstants
+from ..models import Followers, User
+from ..serializers import FollowerSerializer
 
 
 class FollowerManagementService:
 
     def send_follow_request(user_id, follower_id):
         try:
+            print(user_id, follower_id)
             user = User.objects.get(id=user_id)
             follower = User.objects.get(id=follower_id)
             if user.is_public:
